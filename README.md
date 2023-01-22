@@ -1,1 +1,1 @@
-# steam-selenium-testing
+# selenium-testing-steam
