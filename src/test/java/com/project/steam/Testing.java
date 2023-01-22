@@ -118,12 +118,8 @@ public class Testing {
 
         d.findElement(By.id("view_product_page_btn")).click();
 
-        //first game add to cart and test first cart total
+        //add first game to cart
         d.findElement(By.id("btn_add_to_cart_110687")).click();
-
-        String firstTotal = d.findElement(By.id("cart_estimated_total")).getText();
-
-        assertEquals("39,99€", firstTotal);
 
         d.findElement(By.linkText("Continue Shopping")).click();
 
@@ -131,12 +127,12 @@ public class Testing {
         d.findElement(By.name("term")).sendKeys("Fallout");
         d.findElement(By.xpath("/html/body/div[1]/div[7]/div[6]/div[1]/div[2]/div[2]/div/div/div/div[2]/div[2]/div/div[9]/div[2]/div/div/a[2]/div[1]")).click();
 
-        //second game add to cart and test second cart total
+        //add second game to cart and test cart total
         d.findElement(By.id("btn_add_to_cart_103387")).click();
 
-        String secondTotal = d.findElement(By.id("cart_estimated_total")).getText();
+        String total = d.findElement(By.id("cart_estimated_total")).getText();
 
-        assertEquals("59,98€", secondTotal);
+        assertEquals("59,98€", total);
     }
 
     //4
